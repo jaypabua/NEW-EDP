@@ -4,7 +4,7 @@ $servername = "localhost";
 $username = "root";
 $password = ""; //dafault pass blank
 
-$datbase_name = "testdb";
+$datbase_name = "demog";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $datbase_name);
@@ -13,5 +13,6 @@ $conn = new mysqli($servername, $username, $password, $datbase_name);
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
-echo "Connected successfully";
+echo "yess Connected successfully";
+
 ?>
