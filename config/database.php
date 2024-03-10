@@ -15,4 +15,3 @@ if ($conn->connect_error) {
 }
 echo "yess Connected successfully";
 
-?>
