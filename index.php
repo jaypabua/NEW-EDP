@@ -1,53 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
 
- <!DOCTYPE html>
- <html lang="en">
- <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
     <script src="./assets/js/search.js"></script>
 
-    <link href="./assets/bootstrap/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <script src="./assets/bootstrap/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <link href="./assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="./assets/bootstrap/js/bootstrap.bundle.min.js"></script>
 
+    <style>
+        body {
+            background-color: #ecf0f1;
+        }
+    </style>
+</head>
 
- </head>
- <body>
-   <div>
-      <strong>Hello: </strong>
-      <input   style="margin-bottom: 10px;" type="text" placeholder="Looking for?">
-      <hr>
-   </div>
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="javascript:void(0)">
+                <img src="/assets/img/hms_1.jpg" height="30">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/registration.php">Registration</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input onkeyup="search(this.value)" class="form-control me-2" type="text"
+                        placeholder="Search anything here..">
+                    <button class="btn btn-primary" type="button">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
 
+    <div class="container">
+        <p class="h2 mt-3">Dashboard</p>
+        <p>You can view all the recorded data on this dashboard.</p>
+        <div class="card mt-3">
+            <div class="card-header">List of Students</div>
+            <div class="card-body">
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th style="text-align: center;">guest ID</th>
+                            <th style="text-align: center; padding-left: 10px">Guest First Name</th>
+                            <th style="text-align: center;">Guest last name</th>
+                            <th style="text-align: center;">Guest Address</th>
+                            <th style="text-align: center;">Contact Number</th>
+                            <th width="50" style="text-align: center;">INFO</th>
+                        </tr>
+                    </thead>
+                    <tbody id="results">
 
-      <table border="1" style="width: 100%; border-style:double;">
-        <thead>
-            <tr>
-               <th style="
-               margin-right: 10px;
-               width: 100px;
+                    </tbody>
+                </table>
+            </div>
+            <div class="card-footer">
+                -
+            </div>
+        </div>
 
-               ">
-                  EYSSS
-               </th>
+        <div class="modal fade" id="view-details">
+            <div class="modal-dialog">
+                <div class="modal-content">
 
-               <th style="
-               width: 150px;
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Student Information</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
 
-               ">
-                  USER ID
-               </th>
-            </tr>
-        </thead>
-            <tbody>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        Modal body..
+                    </div>
 
-            </tbody> 
-      </table>
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    </div>
 
- </body>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
 
- <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
     crossorigin="anonymous"></script>
-    
- </html>
+
+</html>

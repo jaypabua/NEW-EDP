@@ -1,17 +1,19 @@
 <?php 
-//database info
+// Database connection
 $servername = "localhost";
 $username = "root";
-$password = ""; //dafault pass blank
+$password = ""; // Default Password
 
-$datbase_name = "demog";
+$database_name = "demog";
 
 // Create connection
-$conn = new mysqli($servername, $username, $password, $datbase_name);
+$conn = new mysqli($servername, $username, $password, $database_name);
 
 // Check connection
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
-echo "yess Connected successfully";
 
+//echo "REAL Connected successfully";
+
+?>
