@@ -1,10 +1,10 @@
-<?php 
-// Database connection
+<?php
+// Database Credentials
 $servername = "localhost";
 $username = "root";
-$password = ""; // Default Password
+$password = "";
 
-$database_name = "demog";
+$database_name = "db_st";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $database_name);
@@ -14,6 +14,6 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-//echo "REAL Connected successfully";
+//echo "Connected successfully";
 
 ?>

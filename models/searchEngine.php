@@ -4,7 +4,7 @@ include('../config/database.php');
 
 $value = $_POST['search'];
 
-$sql = "SELECT * FROM guest WHERE G_name LIKE '%$value%'";
+$sql = "SELECT * FROM t_students WHERE (s_last_name LIKE '%$value%' OR s_first_name LIKE '%$value%')";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -12,19 +12,10 @@ if ($result->num_rows > 0) {
         ?>
         <tr>
             <td style="text-align: center;">
-                <?= $row['guest_ID'] ?>
+                <?= $row['s_student_id'] ?>
             </td>
             <td>
-                <?= $row['G_name'] ?>
-            </td>
-            <td>
-                <?= $row['G_lname'] ?>
-            </td>
-            <td>
-                <?= $row['G_address'] ?>
-            </td>
-            <td>
-                <?= $row['G_contactnumber'] ?>
+                <?= $row['s_last_name'] ?>, <?= $row['s_first_name'] ?>
             </td>
             <td class="d-grid">
                 <button type="button" 
